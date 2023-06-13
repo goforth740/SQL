@@ -1,0 +1,28 @@
+-- Create a Book database
+
+CREATE TABLE Books (ID INTEGER PRIMARY KEY, Title TEXT, Price INTEGER, Genre TEXT, Ranking INTEGER);
+
+INSERT INTO Books VALUES (1, 'Harry Potter', 19.99, 'Fantasy', 2);
+INSERT INTO Books VALUES (2, 'Blackdagger Brotherhood', 12.99, 'Romance', 3);
+INSERT INTO Books VALUES (3, 'Anne Frank', 5.99, 'Documentary', 15);
+INSERT INTO Books VALUES (4, 'Skyrim', 29.99, 'Fantasy', 4);
+INSERT INTO Books VALUES (5, 'Paper Quake', 2.99, 'Fiction', 14);
+INSERT INTO Books VALUES (6, 'ACOTAR', 19.99, 'Fantasy', 1);
+INSERT INTO Books VALUES (7, 'The 12 Week Year', 39.99, 'Personal', 11);
+INSERT INTO Books VALUES (8, 'A Soul to Keep', 5.99, 'Romance', 13);
+INSERT INTO Books VALUES (9, 'Long Live the Elf Queen', 3.99, 'Fantasy', 10);
+INSERT INTO Books VALUES (10, 'The Moonfire Bride', 6.99, 'Fantasy', 12);
+INSERT INTO Books VALUES (11, 'Vow of the Shadow King', 7.99, 'Romance', 9);
+INSERT INTO Books VALUES (12, 'Seducing the Dragon', 3.99, 'Romance', 8);
+INSERT INTO Books VALUES (13, 'Gild', 9.99, 'Romance', 7);
+INSERT INTO Books VALUES (14, 'Bow Before the Elf Queen', 6.99, 'Fantasy', 5);
+INSERT INTO Books VALUES (15, 'Fallen', 9.99, 'Fantasy', 6);
+
+-- Display database ordered by price
+SELECT * FROM Books
+ORDER BY Price DESC;
+
+-- What is the average book price in the Fantasy genre?
+SELECT AVG(Price) 'Avg Fantasy Genre Price'
+FROM Books
+WHERE Genre = 'Fantasy'
